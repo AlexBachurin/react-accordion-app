@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
-import data from './data'
+import questions from './data'
 import './App.css';
 import Question from './Question';
 
 function App() {
   //get data and store it in state
-  const [questions, setQuestions] = useState(data);
+  const [data, setData] = useState(questions);
 
-
+  console.log(data);
   return (
     <main>
       <div className="container">
         <h3>questions and answers about login</h3>
         <section className="info">
-          {questions.forEach(({ id, title, info }) => {
-            return <Question id={id} title={title} info={info} />
+          {data.map(({ id, title, info }) => {
+            return (<Question key={id} id={id} title={title} info={info} />)
           })}
         </section>
       </div>
