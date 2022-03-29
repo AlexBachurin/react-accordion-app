@@ -5,9 +5,10 @@ import Question from './Question';
 
 function App() {
   //get data and store it in state
+  //eslint-disable-next-line
   const [data, setData] = useState(questions);
 
-  console.log(data);
+
   return (
     <main>
       <div className="container">
